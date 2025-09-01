@@ -1,4 +1,9 @@
 // FIFO for passing registers across clock domains
+`include "dpram.sv"
+ `include "cdc_fifo_write_state"
+`include "cdc_fifo_read_state"
+`include "synchronizer"
+
 module cdc_fifo #(
   parameter DATA_WIDTH = 8,
   parameter ADDRESS_WIDTH = 8

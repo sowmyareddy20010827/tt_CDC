@@ -5,6 +5,13 @@
 
 `define default_netname none
 `include "cdc_fifo.sv"
+`include "dpram.sv"
+`include "cdc_fifo_read_state.sv"
+`include "cdc_fifo_write_state.sv"
+`include "binary_to_gray.sv"
+`include "gray_to_binary.sv"
+`include "synchronizer.sv"
+
 
 module tt_um_anudeeshcdc_fifo (
     input  wire [7:0] ui_in,    // Dedicated inputs

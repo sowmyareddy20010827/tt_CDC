@@ -1,4 +1,6 @@
 // FIFO for passing registers across clock domains
+`ifndef CDC_FIFO_H
+`define CDC_FIFO_H
 
 module cdc_fifo #(
   parameter DATA_WIDTH = 8,

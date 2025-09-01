@@ -4,13 +4,7 @@
  */
 
 `define default_netname none
-`include "cdc_fifo.sv"
-`include "dpram.sv"
-`include "cdc_fifo_read_state.sv"
-`include "cdc_fifo_write_state.sv"
-`include "binary_to_gray.sv"
-`include "gray_to_binary.sv"
-`include "synchronizer.sv"
+
 
 
 module tt_um_anudeeshcdc_fifo (
@@ -27,6 +21,7 @@ module tt_um_anudeeshcdc_fifo (
   // ui_in mappings
   wire write_clock, write_increment, read_clock, read_increment;
   wire [3:0] write_data;
+
   assign write_clock = ui_in[0],
     write_increment = ui_in[1],
     read_clock = ui_in[2],

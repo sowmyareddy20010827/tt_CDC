@@ -1,3 +1,5 @@
+`include "gray_to_binary.sv"
+`include "binary_to_gray.sv"
 module cdc_fifo_read_state #(
   parameter ADDRESS_WIDTH = 4
 ) (

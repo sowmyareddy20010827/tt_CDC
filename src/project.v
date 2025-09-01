@@ -47,7 +47,7 @@ module tt_um_anudeeshcdc_fifo (
     read_reset = !uio_in[1];
 
   // The FIFO! May it live forever in silicon!
-  cdc_fifo #(
+  cdc_fifo cdc(
     .DATA_WIDTH(4),
     .ADDRESS_WIDTH(5)
   ) kwilke_fifo (

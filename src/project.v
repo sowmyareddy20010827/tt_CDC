@@ -4,7 +4,7 @@
  */
 
 `define default_netname none
-`include "cdc_fifo"
+`include "cdc_fifo.sv"
 module tt_um_anudeeshcdc_fifo (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs

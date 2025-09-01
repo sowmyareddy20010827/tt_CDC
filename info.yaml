@@ -22,8 +22,6 @@ project:
     - "dpram.sv"
     - "cdc_fifo_read_state.sv"
     - "cdc_fifo_write_state.sv"
-    - "binary_to_gray.sv"
-    - "gray_to_binary.sv"
     - "synchronizer.sv"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.

@@ -1,5 +1,4 @@
-`include "gray_to_binary.sv"
-`include "binary_to_gray.sv"
+
 
 module cdc_fifo_write_state #(
   parameter ADDRESS_WIDTH = 4
@@ -37,6 +36,32 @@ module cdc_fifo_write_state #(
       write_address <= 0;
     end else if (increment & !full) begin
       write_address <= write_address + 1;
+    end
+  end
+
+endmodule
+
+module binary_to_gray #(
+  parameter WIDTH = 8
+) (
+  input logic [WIDTH-1:0] binary,
+  output logic [WIDTH-1:0] gray
+);
+
+  assign gray = (binary >> 1) ^ binary;
+
+endmodule
+
+module gray_to_binary #(
+  parameter WIDTH = 8
+) (
+  input logic [WIDTH-1:0] gray,
+  output logic [WIDTH-1:0] binary
+);
+
+  always_comb begin
+    for (int i = 0; i < WIDTH; i++) begin
+      binary[i] = ^(gray >> i);
     end
   end
 
